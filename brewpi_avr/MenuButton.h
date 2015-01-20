@@ -21,6 +21,7 @@ private:
 public:
 	MenuButton();
 	~MenuButton();
+	bool getTypeOfMenu();
 protected:
 private:
 	MenuButton( const MenuButton &c );
