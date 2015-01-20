@@ -35,7 +35,7 @@ uint8_t LcdDisplay::stateOnDisplay;
 uint8_t LcdDisplay::flags;
 #if defined(BREWPI_IIC)
 // TODO: Change this. I2C address should be in config file.
-LcdDriver LcdDisplay::lcd(0x3F,20,4);
+LcdDriver LcdDisplay::lcd(0x27,20,4);
 #else
 LcdDriver LcdDisplay::lcd;
 #endif
@@ -50,6 +50,12 @@ static const char STR_ing_for[] PROGMEM = "ing for";
 static const char STR_Wait_to_[] PROGMEM = "Wait to ";
 static const char STR__time_left[] PROGMEM = " time left";
 static const char STR_empty_string[] PROGMEM = "";
+
+// To display information from the bubble counter
+static const char STR_SUM[] PROGMEM = "SUM";  //total number of bubbles
+static const char STR_MTBB[] PROGMEM = "MTBB";  //Mean time between bubbles in seconds 
+static const char STR_TSLB[] PROGMEM = "TSLB";  //Time since last bubble in seconds
+
 
 void LcdDisplay::init(void){
 	stateOnDisplay = 0xFF; // set to unknown state to force update
