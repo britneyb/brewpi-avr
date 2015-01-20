@@ -312,6 +312,12 @@
     <Compile Include="Menu.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="MenuButton.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MenuButton.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="NullLcdDriver.cpp">
       <SubType>compile</SubType>
     </Compile>

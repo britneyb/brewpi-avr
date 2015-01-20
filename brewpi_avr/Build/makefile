@@ -136,6 +136,7 @@ $(SRC)IicLcd.cpp \
 $(SRC)Logger.cpp \
 $(SRC)Main.cpp \
 $(SRC)Menu.cpp \
+$(SRC)MenuButton.cpp \
 $(SRC)OLEDFourBit.cpp \
 $(SRC)OneWire.cpp \
 $(SRC)OneWireTempSensor.cpp \
@@ -179,6 +180,7 @@ $(OBJ_DIR)IicLcd.o \
 $(OBJ_DIR)Logger.o \
 $(OBJ_DIR)Main.o \
 $(OBJ_DIR)Menu.o \
+$(OBJ_DIR)MenuButton.o \
 $(OBJ_DIR)OLEDFourBit.o \
 $(OBJ_DIR)OneWire.o \
 $(OBJ_DIR)OneWireTempSensor.o \
@@ -215,6 +217,7 @@ $(OBJ_DIR)IicLcd.o \
 $(OBJ_DIR)Logger.o \
 $(OBJ_DIR)Main.o \
 $(OBJ_DIR)Menu.o \
+$(OBJ_DIR)MenuButton.o \
 $(OBJ_DIR)OLEDFourBit.o \
 $(OBJ_DIR)OneWire.o \
 $(OBJ_DIR)OneWireTempSensor.o \
@@ -251,6 +254,7 @@ $(OBJ_DIR)IicLcd.d \
 $(OBJ_DIR)Logger.d \
 $(OBJ_DIR)Main.d \
 $(OBJ_DIR)Menu.d \
+$(OBJ_DIR)MenuButton.d \
 $(OBJ_DIR)OLEDFourBit.d \
 $(OBJ_DIR)OneWire.d \
 $(OBJ_DIR)OneWireTempSensor.d \
@@ -287,6 +291,7 @@ $(OBJ_DIR)IicLcd.d \
 $(OBJ_DIR)Logger.d \
 $(OBJ_DIR)Main.d \
 $(OBJ_DIR)Menu.d \
+$(OBJ_DIR)MenuButton.d \
 $(OBJ_DIR)OLEDFourBit.d \
 $(OBJ_DIR)OneWire.d \
 $(OBJ_DIR)OneWireTempSensor.d \
