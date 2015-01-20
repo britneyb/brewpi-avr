@@ -201,6 +201,12 @@
     <Compile Include="BrewpiStrings.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="Bubblecounter.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Bubblecounter.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="Buzzer.cpp">
       <SubType>compile</SubType>
     </Compile>
