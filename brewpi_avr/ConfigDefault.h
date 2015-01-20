@@ -105,9 +105,9 @@
 #ifndef BREWPI_LCD
 #define BREWPI_LCD 1
 
-// #define BREWPI_IIC       1      // LCD display connected to I2C.
+#define BREWPI_IIC       1      // LCD display connected to I2C.
 // #define BREWPI_OLED      1
-#define BREWPI_SHIFT_LCD 1
+//#define BREWPI_SHIFT_LCD 1
 
 #endif // endif BREWPI_LCD
 
