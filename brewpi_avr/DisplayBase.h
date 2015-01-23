@@ -53,9 +53,14 @@ class Display{
 	// print all temperatures on the LCD
 	DISPLAY_METHOD void printAllTemperatures(void) DISPLAY_METHOD_PURE_VIRTUAL;
 		
+	// print all bubble information on the LCD
+	DISPLAY_METHOD void printBubbleInformation(void) DISPLAY_METHOD_PURE_VIRTUAL;
 
 	// print the stationary text on the lcd.
 	DISPLAY_METHOD void printStationaryText(void) DISPLAY_METHOD_PURE_VIRTUAL;
+	
+	// print the stationary bubble information text on the lcd.
+	DISPLAY_METHOD void printStationaryBubbleInfoText(void) DISPLAY_METHOD_PURE_VIRTUAL;
 	
 	DISPLAY_METHOD void setDisplayFlags(uint8_t newFlags) DISPLAY_METHOD_PURE_VIRTUAL;
 	DISPLAY_METHOD uint8_t getDisplayFlags() DISPLAY_METHOD_PURE_VIRTUAL;
@@ -105,9 +110,15 @@ public:
 	
 	// print all temperatures on the LCD
 	DISPLAY_METHOD void printAllTemperatures(void){}
+
+	// print all bubble information on the LCD
+	DISPLAY_METHOD void printBubbleInformation(void){}
 	
 	// print the stationary text on the lcd.
 	DISPLAY_METHOD void printStationaryText(void){}
+
+	// print the stationary bubble information text on the lcd.
+	DISPLAY_METHOD void printStationaryBubbleInfoText(void){}
 
 	// print mode on the right location on the first line, after Mode:
 	DISPLAY_METHOD void printMode(void){}

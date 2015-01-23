@@ -5,8 +5,9 @@
 * Author: björn
 */
 
-
 #include "Bubblecounter.h"
+
+Bubblecounter bubbleCounter;
 
 // default constructor
 Bubblecounter::Bubblecounter()
@@ -17,3 +18,7 @@ Bubblecounter::Bubblecounter()
 Bubblecounter::~Bubblecounter()
 {
 } //~Bubblecounter
+
+bool Bubblecounter::isConnected(void){
+	return true;
+}

@@ -53,9 +53,15 @@ class LcdDisplay DISPLAY_SUPERCLASS
 
 	// print all temperatures on the LCD
 	DISPLAY_METHOD void printAllTemperatures(void);
+	
+	// print all temperatures on the LCD
+	DISPLAY_METHOD void printBubbleInformation(void);
 
 	// print the stationary text on the lcd.
 	DISPLAY_METHOD void printStationaryText(void);
+
+	// print the stationary bubble information text on the lcd.
+	DISPLAY_METHOD void printStationaryBubbleInfoText(void);
 
 	// print mode on the right location on the first line, after Mode:
 	DISPLAY_METHOD void printMode(void);

@@ -18,7 +18,4 @@ MenuButton::~MenuButton()
 {
 } //~MenuButton
 
-bool MenuButton::getTypeOfMenu()
-{
-	return false;
-}//getTypeOfMenu
+

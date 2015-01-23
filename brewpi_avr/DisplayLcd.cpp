@@ -28,6 +28,7 @@
 #include "TempControl.h"
 #include "TemperatureFormats.h"
 #include "Pins.h"
+#include "bubblecounter.h"
 
 
 
@@ -55,7 +56,7 @@ static const char STR_empty_string[] PROGMEM = "";
 static const char STR_SUM[] PROGMEM = "SUM";  //total number of bubbles
 static const char STR_MTBB[] PROGMEM = "MTBB";  //Mean time between bubbles in seconds 
 static const char STR_TSLB[] PROGMEM = "TSLB";  //Time since last bubble in seconds
-
+static const char STR_UPTIME[] PROGMEM = "UPTIME"; //Uptime since last reboot
 
 void LcdDisplay::init(void){
 	stateOnDisplay = 0xFF; // set to unknown state to force update
@@ -68,6 +69,22 @@ void LcdDisplay::init(void){
 #ifndef UINT16_MAX
 #define UINT16_MAX 65535
 #endif
+
+
+//print bubble information on the LCD
+
+void LcdDisplay::printBubbleInformation(void){
+	if (bubbleCounter.isConnected())
+	{
+		printStationaryBubbleInfoText();
+	}
+	
+	//printTotalNumberOfBubbles();
+	//printMeanTimeBetweenBubbles();
+	//printTimeSinceLastBubble(); 
+	//printUpTime();
+	
+}
 
 //print all temperatures on the LCD
 void LcdDisplay::printAllTemperatures(void){
@@ -143,6 +160,15 @@ void LcdDisplay::printStationaryText(void){
 	printAt_P(0, 2, (flags & LCD_FLAG_DISPLAY_ROOM) ?  PSTR("Room  ") : STR_Fridge_);
 	printDegreeUnit(18, 1);
 	printDegreeUnit(18, 2);
+}
+
+void LcdDisplay::printStationaryBubbleInfoText(void){
+	printAt_P(0, 0, STR_SUM);
+	printAt_P(0, 1, STR_MTBB);
+	printAt_P(0, 2, STR_TSLB);
+	printAt_P(0, 3, STR_UPTIME);
+	//printDegreeUnit(18, 1);
+	//printDegreeUnit(18, 2);
 }
 
 //print degree sign + temp unit

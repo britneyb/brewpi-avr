@@ -21,11 +21,14 @@ private:
 public:
 	Bubblecounter();
 	~Bubblecounter();
+	bool isConnected(void);
 protected:
 private:
 	Bubblecounter( const Bubblecounter &c );
 	Bubblecounter& operator=( const Bubblecounter &c );
 
 }; //Bubblecounter
+
+extern Bubblecounter bubbleCounter;
 
 #endif //__BUBBLECOUNTER_H__

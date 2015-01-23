@@ -9,6 +9,12 @@
 #ifndef __MENUBUTTON_H__
 #define __MENUBUTTON_H__
 
+enum menusSelection{
+MENU_SELECTION_TEMPERATURE,
+MENU_SELECTION_BUBBLECOUNTER,
+MENU_SELECTION_TURN_OFF_LCD	
+};
+
 
 class MenuButton
 {
@@ -17,11 +23,12 @@ public:
 protected:
 private:
 
+
 //functions
 public:
 	MenuButton();
 	~MenuButton();
-	bool getTypeOfMenu();
+
 protected:
 private:
 	MenuButton( const MenuButton &c );
