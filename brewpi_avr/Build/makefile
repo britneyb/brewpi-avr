@@ -122,7 +122,7 @@ $(SRC)ActuatorArduino.cpp \
 $(SRC)ArduinoFunctions.cpp \
 $(SRC)Brewpi.cpp \
 $(SRC)BrewpiStrings.cpp \
-$(SRC)Bubblecounter.cpp \
+$(SRC)BubbleControl.cpp \
 $(SRC)Buzzer.cpp \
 $(SRC)DallasTemperature.cpp \
 $(SRC)DeviceManager.cpp \
@@ -166,7 +166,7 @@ $(OBJ_DIR)ActuatorArduinoPin.o \
 $(OBJ_DIR)ArduinoFunctions.o \
 $(OBJ_DIR)Brewpi.o \
 $(OBJ_DIR)BrewpiStrings.o \
-$(OBJ_DIR)Bubblecounterr.o \
+$(OBJ_DIR)BubbleControlr.o \
 $(OBJ_DIR)Buzzer.o \
 $(OBJ_DIR)DallasTemperature.o \
 $(OBJ_DIR)DeviceManager.o \
@@ -203,7 +203,7 @@ $(OBJ_DIR)ActuatorArduinoPin.o \
 $(OBJ_DIR)ArduinoFunctions.o \
 $(OBJ_DIR)Brewpi.o \
 $(OBJ_DIR)BrewpiStrings.o \
-$(OBJ_DIR)Bubblecounter.o \
+$(OBJ_DIR)BubbleControl.o \
 $(OBJ_DIR)Buzzer.o \
 $(OBJ_DIR)DallasTemperature.o \
 $(OBJ_DIR)DeviceManager.o \
@@ -240,7 +240,7 @@ $(OBJ_DIR)ActuatorArduinoPin.d \
 $(OBJ_DIR)ArduinoFunctions.d \
 $(OBJ_DIR)Brewpi.d \
 $(OBJ_DIR)BrewpiStrings.d \
-$(OBJ_DIR)Bubblecounter.d \
+$(OBJ_DIR)BubbleControl.d \
 $(OBJ_DIR)Buzzer.d \
 $(OBJ_DIR)DallasTemperature.d \
 $(OBJ_DIR)DeviceManager.d \
@@ -277,7 +277,7 @@ $(OBJ_DIR)ActuatorArduinoPin.d \
 $(OBJ_DIR)ArduinoFunctions.d \
 $(OBJ_DIR)Brewpi.d \
 $(OBJ_DIR)BrewpiStrings.d \
-$(OBJ_DIR)Bubblecounter.d \
+$(OBJ_DIR)BubbleControl.d \
 $(OBJ_DIR)Buzzer.d \
 $(OBJ_DIR)DallasTemperature.d \
 $(OBJ_DIR)DeviceManager.d \

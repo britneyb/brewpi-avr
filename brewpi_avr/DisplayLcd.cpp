@@ -28,7 +28,7 @@
 #include "TempControl.h"
 #include "TemperatureFormats.h"
 #include "Pins.h"
-#include "bubblecounter.h"
+#include "BubbleControl.h"
 
 
 
@@ -74,15 +74,15 @@ void LcdDisplay::init(void){
 //print bubble information on the LCD
 
 void LcdDisplay::printBubbleInformation(void){
-	if (bubbleCounter.isConnected())
+	if (bubbleControl.isConnected())
 	{
 		printStationaryBubbleInfoText();
 	}
 	
-	//printTotalNumberOfBubbles();
-	//printMeanTimeBetweenBubbles();
-	//printTimeSinceLastBubble(); 
-	//printUpTime();
+	printTotalNumberOfBubbles();
+	printMeanTimeBetweenBubbles();
+	printTimeSinceLastBubble(); 
+	printUpTime();
 	
 }
 
@@ -109,6 +109,19 @@ void LcdDisplay::setDisplayFlags(uint8_t newFlags) {
 	printAllTemperatures();
 }
 
+
+void LcdDisplay::printTotalNumberOfBubbles(void){
+		
+}
+void LcdDisplay::printMeanTimeBetweenBubbles(void){
+		
+}
+void LcdDisplay::printTimeSinceLastBubble(void){
+		
+}
+void LcdDisplay::printUpTime(void){
+		
+}
 
 
 void LcdDisplay::printBeerTemp(void){

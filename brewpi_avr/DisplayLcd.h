@@ -69,6 +69,19 @@ class LcdDisplay DISPLAY_SUPERCLASS
 	DISPLAY_METHOD void setDisplayFlags(uint8_t newFlags);
 	DISPLAY_METHOD uint8_t getDisplayFlags(){ return flags; };
 
+	// print total number of bubbles from start on the display
+	DISPLAY_METHOD void printTotalNumberOfBubbles(void);
+	
+		// print mean time between two bubbles on the display
+	DISPLAY_METHOD void printMeanTimeBetweenBubbles(void);
+	
+		// print time since last bubble on the display
+	DISPLAY_METHOD void printTimeSinceLastBubble(void);
+	
+		// print beer temperature at the right place on the display
+	DISPLAY_METHOD void printUpTime(void);
+
+
 	// print beer temperature at the right place on the display
 	DISPLAY_METHOD void printBeerTemp(void);
 

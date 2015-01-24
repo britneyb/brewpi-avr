@@ -68,6 +68,19 @@ class Display{
 	// print mode on the right location on the first line, after Mode:
 	DISPLAY_METHOD void printMode(void) DISPLAY_METHOD_PURE_VIRTUAL;
 
+	// print total number of bubbles from start on the display
+	DISPLAY_METHOD void printTotalNumberOfBubbles(void)DISPLAY_METHOD_PURE_VIRTUAL;
+	
+	// print mean time between two bubbles on the display
+	DISPLAY_METHOD void printMeanTimeBetweenBubbles(void)DISPLAY_METHOD_PURE_VIRTUAL;
+	
+	// print time since last bubble on the display
+	DISPLAY_METHOD void printTimeSinceLastBubble(void)DISPLAY_METHOD_PURE_VIRTUAL;
+	
+	// print beer temperature at the right place on the display
+	DISPLAY_METHOD void printUpTime(void)DISPLAY_METHOD_PURE_VIRTUAL;
+
+
 	// print beer temperature at the right place on the display
 	DISPLAY_METHOD void printBeerTemp(void) DISPLAY_METHOD_PURE_VIRTUAL;
 
