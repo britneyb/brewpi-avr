@@ -7,18 +7,37 @@
 
 #include "BubbleControl.h"
 
+
+
+
 BubbleControl bubbleControl;
 
 // default constructor
-BubbleControl::BubbleControl()
-{
+BubbleControl::BubbleControl(){
+	totalNumberOfBubbles = 0;
 } //BubbleControl
 
 // default destructor
-BubbleControl::~BubbleControl()
-{
+BubbleControl::~BubbleControl(){
 } //~BubbleControl
 
 bool BubbleControl::isConnected(void){
 	return true;
+}
+
+
+
+unsigned long BubbleControl::getTotalNumberOfBubbles(void){
+return totalNumberOfBubbles;	
+} 
+
+uint8_t BubbleControl::getMeanTimeBetweenBubbles(void){
+return 1;	
+}
+uint8_t BubbleControl::getTimeSinceLastBubble(void){
+return 1;	
+}
+
+uint8_t BubbleControl::getUpTime(void){
+return 1;	
 }
