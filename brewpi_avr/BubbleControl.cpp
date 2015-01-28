@@ -15,6 +15,13 @@ BubbleControl bubbleControl;
 // default constructor
 BubbleControl::BubbleControl(){
 	totalNumberOfBubbles = 0;
+
+	//timestampOfLastBubble;
+	currentPeriod.timestampFirstBubbleOfPeriod=ticks.seconds();
+	//currentPeriod.numberOfBubbles = 0;
+	//previousPeriod.numberOfBubbles = 0;
+	previousPeriod.timestampFirstBubbleOfPeriod = ticks.seconds();
+	
 } //BubbleControl
 
 // default destructor
