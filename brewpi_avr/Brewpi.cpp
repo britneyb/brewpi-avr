@@ -40,6 +40,8 @@
 #include "Ticks.h"
 #include "Sensor.h"
 #include "SettingsManager.h"
+#include "BubbleControl.h"
+#include "MenuButton.h"
 
 #if BREWPI_SIMULATE
 	#include "Simulator.h"
@@ -83,6 +85,7 @@ void setup()
 	tempControl.fridgeSensor->init();	
 #endif	
 
+	menuButton.init();
 	display.init();
 	display.printStationaryText();
 	display.printState();
@@ -114,6 +117,7 @@ void brewpiLoop(void)
 			piLink.printTemperatures(); // add a data point at every state transition
 		}
 		tempControl.updateOutputs();
+		
 
 #if BREWPI_MENU
 		if(rotaryEncoder.pushed()){
