@@ -21,6 +21,7 @@
 
 #include "Brewpi.h"
 #include "DisplayBase.h"
+#include "MenuButton.h"
 
 #if BREWPI_EMULATE || !BREWPI_LCD || !ARDUINO
     #include "NullLcdDriver.h"
@@ -40,6 +41,10 @@
 
 class LcdDisplay DISPLAY_SUPERCLASS
 {
+	public:
+	
+	
+	
 	public:
 	// initializes the lcd display
 	DISPLAY_METHOD void init(void);
@@ -121,4 +126,5 @@ class LcdDisplay DISPLAY_SUPERCLASS
 	DISPLAY_FIELD LcdDriver lcd;
 	DISPLAY_FIELD uint8_t stateOnDisplay;
 	DISPLAY_FIELD uint8_t flags;
+	
 };
