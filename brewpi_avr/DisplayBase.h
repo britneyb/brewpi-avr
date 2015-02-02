@@ -23,7 +23,6 @@
 #include "Brewpi.h"
 #include "TemperatureFormats.h"
 
-
 /* Set to 1 to enable virtual functions and polymorphic display. */
 #define DISPLAY_POLYMORPHIC 0
 #if DISPLAY_POLYMORPHIC 
@@ -42,9 +41,6 @@
 
 #if DISPLAY_POLYMORPHIC
 class Display{
-	
-	public:
-	
 	public:
 	Display(){};	
 	DISPLAY_METHOD ~Display();

@@ -5,7 +5,7 @@
 * Author: björn
 */
 
-#include "Brewpi.h"
+
 #ifndef __MENUBUTTON_H__
 #define __MENUBUTTON_H__
 
@@ -22,23 +22,18 @@ class MenuButton
 public:
 protected:
 private:
-int8_t counter;
+
 
 //functions
 public:
 	MenuButton();
 	~MenuButton();
-	void init();
-	int8_t getMenuSelection();
 
 protected:
 private:
 	MenuButton( const MenuButton &c );
 	MenuButton& operator=( const MenuButton &c );
-	int Counter();
-	
-}; //MenuButton
 
-extern MenuButton menuButton;
+}; //MenuButton
 
 #endif //__MENUBUTTON_H__

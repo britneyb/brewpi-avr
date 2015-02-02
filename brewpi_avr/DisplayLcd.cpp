@@ -29,7 +29,7 @@
 #include "TemperatureFormats.h"
 #include "Pins.h"
 #include "BubbleControl.h"
-#include "MenuButton.h"
+
 
 
 uint8_t LcdDisplay::stateOnDisplay;
@@ -64,8 +64,6 @@ void LcdDisplay::init(void){
 	lcd.init(); // initialize LCD
 	lcd.begin(20, 4);
 	lcd.clear();
-	
-
 }
 
 #ifndef UINT16_MAX
