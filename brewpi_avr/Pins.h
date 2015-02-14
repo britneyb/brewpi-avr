@@ -69,7 +69,7 @@
 #define doorPin		4
 #define alarmPin	3
 #define lcdLatchPin 10
-#define menuButtonPin 2
+#define menuButtonPin 0
 
 // If you change the interrupt pins, you will also have to review the interrupt vectors of the rotary encoder
 #define rotarySwitchPin 7 // INT6 on leo or PCINT23 on uno

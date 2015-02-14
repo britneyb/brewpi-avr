@@ -11,8 +11,10 @@
 #include "Pins.h"
 #include "FastDigitalPin.h"
 
+
 // default constructor
 MenuButton::MenuButton(){
+	currentState = false;
 } //MenuButton
 
 // default destructor
@@ -25,27 +27,46 @@ void MenuButton::init(){
 }
 //MenuButton::readButton(){
 
-int MenuButton::Counter(){
-return counter++;	
+
+void MenuButton::updateMenuSelection(){
+	if(digitalRead(menuButtonPin) && !currentState)
+	{
+		choice++;
+		currentState=true;
+	}
+	else if (digitalRead(menuButtonPin) && currentState)
+	{
+		currentState=true;
+	}
+	else
+		currentState=false;	
+		
 }
 
+/*String MenuButton::getMenuSelectionInAString(){
+	
+	return String(choice);
+}*/
+
 int8_t MenuButton::getMenuSelection(){
-	int8_t choice;
+	choice = 1;
 	
 	switch(choice){
 	
 	case MENU_SELECTION_TEMPERATURE: 
-		return choice; 
+		return 1; 
 		break;
 	case MENU_SELECTION_BUBBLECONTROL:
-		return choice;
+		return 2;
 		break;
 	case MENU_SELECTION_TURN_OFF_LCD:
-	    return choice;
+	    return 3;
 		break;
 	default:
-		choice = -1;
+		choice = 1;
+		
 	}
+	return choice;
 }
 
 MenuButton menuButton;

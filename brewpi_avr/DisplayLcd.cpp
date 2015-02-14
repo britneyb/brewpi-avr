@@ -122,7 +122,7 @@ void LcdDisplay::printTimeSinceLastBubble(void){
 		
 }
 void LcdDisplay::printUpTime(void){
-		
+		//printAt_P(0,1, (char)(menuButton.getMenuSelection()));
 }
 
 

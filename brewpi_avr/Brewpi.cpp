@@ -117,7 +117,7 @@ void brewpiLoop(void)
 			piLink.printTemperatures(); // add a data point at every state transition
 		}
 		tempControl.updateOutputs();
-		
+		menuButton.updateMenuSelection();
 
 #if BREWPI_MENU
 		if(rotaryEncoder.pushed()){
@@ -127,10 +127,28 @@ void brewpiLoop(void)
 #endif
 
 		// update the lcd for the chamber being displayed
-		display.printState();
-		display.printAllTemperatures();
-		display.printMode();
-		display.updateBacklight();		
+		
+		switch (menuButton.getMenuSelection())
+		{
+		case MENU_SELECTION_TEMPERATURE:		
+			display.printState();
+			display.printAllTemperatures();
+			
+			display.printMode();
+			display.updateBacklight();
+			break;
+		case MENU_SELECTION_BUBBLECONTROL:
+			display.printUpTime();
+
+			break;
+		
+		case MENU_SELECTION_TURN_OFF_LCD:
+		char kalle; 
+		display.resetBacklightTimer();
+			break;		
+		}
+		
+				
 	}	
 
 	//listen for incoming serial connections while waiting to update

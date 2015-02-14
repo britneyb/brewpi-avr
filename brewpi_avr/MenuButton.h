@@ -10,7 +10,7 @@
 #define __MENUBUTTON_H__
 
 enum menusSelection{
-MENU_SELECTION_TEMPERATURE,
+MENU_SELECTION_TEMPERATURE = 1,
 MENU_SELECTION_BUBBLECONTROL,
 MENU_SELECTION_TURN_OFF_LCD	
 };
@@ -22,7 +22,8 @@ class MenuButton
 public:
 protected:
 private:
-int8_t counter;
+int8_t choice;
+bool currentState;
 
 //functions
 public:
@@ -30,7 +31,7 @@ public:
 	~MenuButton();
 	void init();
 	int8_t getMenuSelection();
-
+	void updateMenuSelection();
 protected:
 private:
 	MenuButton( const MenuButton &c );
