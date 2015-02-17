@@ -21,7 +21,6 @@
 
 #include "Brewpi.h"
 #include "DisplayBase.h"
-#include "BubbleControl.h"
 
 #if BREWPI_EMULATE || !BREWPI_LCD || !ARDUINO
     #include "NullLcdDriver.h"
@@ -112,7 +111,6 @@ class LcdDisplay DISPLAY_SUPERCLASS
 	// print a temperature
 	DISPLAY_METHOD void printTemperature(temperature temp);
 	DISPLAY_METHOD void printTemperatureAt(uint8_t x, uint8_t y, temperature temp);
-	DISPLAY_METHOD void printBubbleInfoAt(uint8_t x, uint8_t y, BubbleControl bubbleControl);
 
 	// print degree sign + C/F
 	DISPLAY_METHOD void printDegreeUnit(uint8_t x, uint8_t y);

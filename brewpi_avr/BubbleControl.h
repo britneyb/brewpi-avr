@@ -12,10 +12,10 @@
 #include "Ticks.h"
 
 
-//holds number of bubbles and start time of a specific period
-struct BubbleInterval{
+//holds number of bubbles and starttime of a specific period
+struct BubbleIntervall{
 int16_t numberOfBubbles;
-unsigned int timestampFirstBubbleOfPeriod;
+ExternalTicks timestampFirstBubbleOfPeriod;
 };
 	
 
@@ -28,9 +28,9 @@ public:
 protected:
 private:
 unsigned long totalNumberOfBubbles; 
-unsigned int timestampOfLastBubble;
-BubbleInterval currentPeriod;
-BubbleInterval previousPeriod;
+ExternalTicks timestampOfLastBubble;
+BubbleIntervall currentPeriod;
+BubbleIntervall previousPeriod;
 
 
  

@@ -151,10 +151,6 @@ void LcdDisplay::printTemperatureAt(uint8_t x, uint8_t y, temperature temp){
 	printTemperature(temp);
 }
 
-void LcdDisplay::printBubbleInfoAt(uint8_t x, uint8_t y, BubbleControl bubbleControl){
-	lcd.setCursor(x,y);
-	//printTemperature(bubbleControl);
-}
 
 void LcdDisplay::printTemperature(temperature temp){
 	if (temp==INVALID_TEMP) {

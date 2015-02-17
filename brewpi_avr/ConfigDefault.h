@@ -114,7 +114,7 @@
 /**
  * Turn off LCD backlight after this time. Seconds.
  */
-#define BACKLIGHT_AUTO_OFF_PERIOD 3600
+#define BACKLIGHT_AUTO_OFF_PERIOD 60
 
 #ifndef BREWPI_BUZZER
 	#if BREWPI_STATIC_CONFIG==BREWPI_SHIELD_DIY
