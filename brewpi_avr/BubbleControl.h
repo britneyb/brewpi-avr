@@ -44,6 +44,7 @@ public:
 	uint8_t getTimeSinceLastBubble(void);
 	uint8_t getUpTime(void);
 	void init();
+	void updateBubbles(void);
 protected:
 private:
 	BubbleControl( const BubbleControl &c );

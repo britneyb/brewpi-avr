@@ -6,6 +6,7 @@
 */
 
 #include "Brewpi.h"
+#include "Logger.h"
 #ifndef __MENUBUTTON_H__
 #define __MENUBUTTON_H__
 
@@ -32,6 +33,7 @@ public:
 	void init();
 	int8_t getMenuSelection();
 	void updateMenuSelection();
+	int8_t getChoice();
 protected:
 private:
 	MenuButton( const MenuButton &c );

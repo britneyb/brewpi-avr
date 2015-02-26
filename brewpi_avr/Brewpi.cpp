@@ -77,6 +77,7 @@ void setup()
 	logDebug("started");	
 	tempControl.init();
 	settingsManager.loadSettings();
+	bubbleControl.init();
 	
 #if BREWPI_SIMULATE
 	simulator.step();
@@ -118,7 +119,7 @@ void brewpiLoop(void)
 		}
 		tempControl.updateOutputs();
 		menuButton.updateMenuSelection();
-
+		
 #if BREWPI_MENU
 		if(rotaryEncoder.pushed()){
 			rotaryEncoder.resetPushed();
@@ -143,8 +144,7 @@ void brewpiLoop(void)
 			break;
 		
 		case MENU_SELECTION_TURN_OFF_LCD:
-		char kalle; 
-		display.resetBacklightTimer();
+			display.resetBacklightTimer();
 			break;		
 		}
 		

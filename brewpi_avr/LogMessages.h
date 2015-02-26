@@ -95,5 +95,8 @@ enum infoMessages{
 	MSG(INFO_POSITIVE_PEAK, "Positive peak detected: %s, estimated: %s. Previous heat estimator: %s, New heat estimator: %s.", temperature, temperature, estimator, estimator),
 	MSG(INFO_NEGATIVE_PEAK, "Negative peak detected: %s, estimated: %s. Previous cool estimator: %s, New cool estimator: %s.", temperature, temperature, estimator, estimator),
 	MSG(INFO_POSITIVE_DRIFT, "No peak detected. Drifting up after heating, current temp: %s, estimated peak: %s. Previous heat estimator: %s, New heat estimator: %s..", temperature, temperature, estimator, estimator),
-	MSG(INFO_NEGATIVE_DRIFT, "No peak detected. Drifting down after cooling, current temp: %s, estimated peak: %s. Previous cool estimator: %s, New cool estimator: %s..", temperature, temperature, estimator, estimator)	
+	MSG(INFO_NEGATIVE_DRIFT, "No peak detected. Drifting down after cooling, current temp: %s, estimated peak: %s. Previous cool estimator: %s, New cool estimator: %s..", temperature, temperature, estimator, estimator),	
+
+//MenuButton.cpp
+	MSG(INFO_CHOICE, "Choice = %s", menuButton.getChoice())
 }; // END enum infoMessages

@@ -10,11 +10,13 @@
 #include "Brewpi.h"
 #include "Pins.h"
 #include "FastDigitalPin.h"
+#include "Logger.h"
+
 
 
 // default constructor
 MenuButton::MenuButton(){
-	currentState = false;
+
 } //MenuButton
 
 // default destructor
@@ -24,6 +26,8 @@ MenuButton::~MenuButton()
 
 void MenuButton::init(){
 	fastPinMode(menuButtonPin,INPUT);
+		currentState = false;
+		choice = 1;
 }
 //MenuButton::readButton(){
 
@@ -40,18 +44,28 @@ void MenuButton::updateMenuSelection(){
 	}
 	else
 		currentState=false;	
-		
+	
+	if (choice > 3){
+		choice = 1;
+	}
+
 }
 
 /*String MenuButton::getMenuSelectionInAString(){
 	
 	return String(choice);
 }*/
+int8_t MenuButton::getChoice(){
+	return choice;
+	
+}
 
 int8_t MenuButton::getMenuSelection(){
-	choice = 1;
 	
-	switch(choice){
+		logInfo(INFO_CHOICE);
+		
+		int8_t test = 1;
+	switch(test){
 	
 	case MENU_SELECTION_TEMPERATURE: 
 		return 1; 

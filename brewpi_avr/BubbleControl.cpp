@@ -6,11 +6,12 @@
 */
 
 #include "BubbleControl.h"
+#include "Pins.h"
 
 
 
 
-BubbleControl bubbleControl;
+
 
 // default constructor
 BubbleControl::BubbleControl(){
@@ -27,6 +28,16 @@ bool BubbleControl::isConnected(void){
 
 
 
+void BubbleControl::updateBubbles(void){
+	
+	//if ()
+	//{
+	//}
+}
+
+void BubbleControl::init(){
+	fastPinMode(bubblePin,INPUT);
+}
 unsigned long BubbleControl::getTotalNumberOfBubbles(void){
 return totalNumberOfBubbles;	
 } 
@@ -41,3 +52,5 @@ return 1;
 uint8_t BubbleControl::getUpTime(void){
 return 1;	
 }
+
+BubbleControl bubbleControl;

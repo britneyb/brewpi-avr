@@ -123,6 +123,18 @@ void LcdDisplay::printTimeSinceLastBubble(void){
 }
 void LcdDisplay::printUpTime(void){
 		//printAt_P(0,1, (char)(menuButton.getMenuSelection()));
+		uint8_t x = 0; 
+		uint8_t y = 1;
+		lcd.setCursor(x,y);
+			char tempString[9];
+			
+			int8_t spacesToWrite = 5 - (int8_t) strlen(tempString);
+			for(int8_t i = 0; i < spacesToWrite ;i++){
+				lcd.write(' ');
+			}
+			lcd.print(tempString);
+		
+		
 }
 
 
